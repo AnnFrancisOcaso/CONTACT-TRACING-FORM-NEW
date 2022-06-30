@@ -16,5 +16,23 @@ namespace Contact_Tracing
         {
             InitializeComponent();
         }
+
+        private void formToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Contact_Tracing_Form f2 = new Contact_Tracing_Form();
+            this.Hide();
+            f2.Show();        
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This collect information for health purposes. This helps to monitor people who had closed contact with Covid-19 patients.", "About");
+        }
     }
 }
