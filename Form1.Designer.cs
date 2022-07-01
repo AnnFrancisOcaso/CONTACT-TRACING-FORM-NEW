@@ -33,8 +33,8 @@ namespace Contact_Tracing
             this.datebx = new System.Windows.Forms.TextBox();
             this.temperaturebx = new System.Windows.Forms.TextBox();
             this.temperaturelbl = new System.Windows.Forms.Label();
-            this.timebx = new System.Windows.Forms.TextBox();
-            this.timelbl = new System.Windows.Forms.Label();
+            this.namebx = new System.Windows.Forms.TextBox();
+            this.namelbl = new System.Windows.Forms.Label();
             this.datelbl = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,6 +44,9 @@ namespace Contact_Tracing
             this.recordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.qrToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.surnamebx = new System.Windows.Forms.TextBox();
+            this.surnamelbl = new System.Windows.Forms.Label();
+            this.insertbttn = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,14 +63,14 @@ namespace Contact_Tracing
             // 
             // datebx
             // 
-            this.datebx.Location = new System.Drawing.Point(184, 118);
+            this.datebx.Location = new System.Drawing.Point(187, 113);
             this.datebx.Name = "datebx";
             this.datebx.Size = new System.Drawing.Size(225, 20);
             this.datebx.TabIndex = 129;
             // 
             // temperaturebx
             // 
-            this.temperaturebx.Location = new System.Drawing.Point(184, 212);
+            this.temperaturebx.Location = new System.Drawing.Point(187, 225);
             this.temperaturebx.Name = "temperaturebx";
             this.temperaturebx.Size = new System.Drawing.Size(225, 20);
             this.temperaturebx.TabIndex = 128;
@@ -77,36 +80,36 @@ namespace Contact_Tracing
             this.temperaturelbl.AutoSize = true;
             this.temperaturelbl.Font = new System.Drawing.Font("Sitka Display", 12F);
             this.temperaturelbl.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.temperaturelbl.Location = new System.Drawing.Point(82, 208);
+            this.temperaturelbl.Location = new System.Drawing.Point(85, 221);
             this.temperaturelbl.Name = "temperaturelbl";
             this.temperaturelbl.Size = new System.Drawing.Size(96, 23);
             this.temperaturelbl.TabIndex = 127;
             this.temperaturelbl.Text = "Temperature:";
             // 
-            // timebx
+            // namebx
             // 
-            this.timebx.Location = new System.Drawing.Point(184, 164);
-            this.timebx.Name = "timebx";
-            this.timebx.Size = new System.Drawing.Size(225, 20);
-            this.timebx.TabIndex = 126;
+            this.namebx.Location = new System.Drawing.Point(187, 149);
+            this.namebx.Name = "namebx";
+            this.namebx.Size = new System.Drawing.Size(225, 20);
+            this.namebx.TabIndex = 126;
             // 
-            // timelbl
+            // namelbl
             // 
-            this.timelbl.AutoSize = true;
-            this.timelbl.Font = new System.Drawing.Font("Sitka Display", 12F);
-            this.timelbl.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.timelbl.Location = new System.Drawing.Point(82, 160);
-            this.timelbl.Name = "timelbl";
-            this.timelbl.Size = new System.Drawing.Size(47, 23);
-            this.timelbl.TabIndex = 125;
-            this.timelbl.Text = "Time:";
+            this.namelbl.AutoSize = true;
+            this.namelbl.Font = new System.Drawing.Font("Sitka Display", 12F);
+            this.namelbl.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.namelbl.Location = new System.Drawing.Point(85, 145);
+            this.namelbl.Name = "namelbl";
+            this.namelbl.Size = new System.Drawing.Size(84, 23);
+            this.namelbl.TabIndex = 125;
+            this.namelbl.Text = "First Name:";
             // 
             // datelbl
             // 
             this.datelbl.AutoSize = true;
             this.datelbl.Font = new System.Drawing.Font("Sitka Display", 12F);
             this.datelbl.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.datelbl.Location = new System.Drawing.Point(83, 115);
+            this.datelbl.Location = new System.Drawing.Point(86, 110);
             this.datelbl.Name = "datelbl";
             this.datelbl.Size = new System.Drawing.Size(47, 23);
             this.datelbl.TabIndex = 124;
@@ -175,16 +178,48 @@ namespace Contact_Tracing
             this.qrToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.qrToolStripMenuItem.Text = "Qr";
             // 
+            // surnamebx
+            // 
+            this.surnamebx.Location = new System.Drawing.Point(187, 188);
+            this.surnamebx.Name = "surnamebx";
+            this.surnamebx.Size = new System.Drawing.Size(225, 20);
+            this.surnamebx.TabIndex = 132;
+            // 
+            // surnamelbl
+            // 
+            this.surnamelbl.AutoSize = true;
+            this.surnamelbl.Font = new System.Drawing.Font("Sitka Display", 12F);
+            this.surnamelbl.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.surnamelbl.Location = new System.Drawing.Point(85, 184);
+            this.surnamelbl.Name = "surnamelbl";
+            this.surnamelbl.Size = new System.Drawing.Size(71, 23);
+            this.surnamelbl.TabIndex = 131;
+            this.surnamelbl.Text = "Surname:";
+            // 
+            // insertbttn
+            // 
+            this.insertbttn.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.insertbttn.Location = new System.Drawing.Point(187, 281);
+            this.insertbttn.Name = "insertbttn";
+            this.insertbttn.Size = new System.Drawing.Size(126, 32);
+            this.insertbttn.TabIndex = 133;
+            this.insertbttn.Text = "Insert";
+            this.insertbttn.UseVisualStyleBackColor = true;
+            this.insertbttn.Click += new System.EventHandler(this.insertbttn_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(524, 291);
+            this.ClientSize = new System.Drawing.Size(524, 350);
+            this.Controls.Add(this.insertbttn);
+            this.Controls.Add(this.surnamebx);
+            this.Controls.Add(this.surnamelbl);
             this.Controls.Add(this.datebx);
             this.Controls.Add(this.temperaturebx);
             this.Controls.Add(this.temperaturelbl);
-            this.Controls.Add(this.timebx);
-            this.Controls.Add(this.timelbl);
+            this.Controls.Add(this.namebx);
+            this.Controls.Add(this.namelbl);
             this.Controls.Add(this.datelbl);
             this.Controls.Add(this.formlbl);
             this.Controls.Add(this.menuStrip1);
@@ -206,8 +241,8 @@ namespace Contact_Tracing
         private System.Windows.Forms.TextBox datebx;
         private System.Windows.Forms.TextBox temperaturebx;
         private System.Windows.Forms.Label temperaturelbl;
-        private System.Windows.Forms.TextBox timebx;
-        private System.Windows.Forms.Label timelbl;
+        private System.Windows.Forms.TextBox namebx;
+        private System.Windows.Forms.Label namelbl;
         private System.Windows.Forms.Label datelbl;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
@@ -217,6 +252,9 @@ namespace Contact_Tracing
         private System.Windows.Forms.ToolStripMenuItem recordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dataToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem qrToolStripMenuItem;
+        private System.Windows.Forms.TextBox surnamebx;
+        private System.Windows.Forms.Label surnamelbl;
+        private System.Windows.Forms.Button insertbttn;
     }
 }
 
