@@ -43,10 +43,13 @@ namespace Contact_Tracing
             this.formToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.loginInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contactFormInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.qrToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.surnamebx = new System.Windows.Forms.TextBox();
             this.surnamelbl = new System.Windows.Forms.Label();
-            this.insertbttn = new System.Windows.Forms.Button();
+            this.savebttn = new System.Windows.Forms.Button();
+            this.detailsbttn = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -139,14 +142,14 @@ namespace Contact_Tracing
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
             this.helpToolStripMenuItem.Text = "Help";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -168,9 +171,25 @@ namespace Contact_Tracing
             // 
             // dataToolStripMenuItem
             // 
+            this.dataToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.loginInformationToolStripMenuItem,
+            this.contactFormInformationToolStripMenuItem});
             this.dataToolStripMenuItem.Name = "dataToolStripMenuItem";
             this.dataToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.dataToolStripMenuItem.Text = "Data";
+            // 
+            // loginInformationToolStripMenuItem
+            // 
+            this.loginInformationToolStripMenuItem.Name = "loginInformationToolStripMenuItem";
+            this.loginInformationToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.loginInformationToolStripMenuItem.Text = "Login Information";
+            this.loginInformationToolStripMenuItem.Click += new System.EventHandler(this.loginInformationToolStripMenuItem_Click);
+            // 
+            // contactFormInformationToolStripMenuItem
+            // 
+            this.contactFormInformationToolStripMenuItem.Name = "contactFormInformationToolStripMenuItem";
+            this.contactFormInformationToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.contactFormInformationToolStripMenuItem.Text = "Contact Form Information";
             // 
             // qrToolStripMenuItem
             // 
@@ -196,23 +215,35 @@ namespace Contact_Tracing
             this.surnamelbl.TabIndex = 131;
             this.surnamelbl.Text = "Surname:";
             // 
-            // insertbttn
+            // savebttn
             // 
-            this.insertbttn.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.insertbttn.Location = new System.Drawing.Point(187, 281);
-            this.insertbttn.Name = "insertbttn";
-            this.insertbttn.Size = new System.Drawing.Size(126, 32);
-            this.insertbttn.TabIndex = 133;
-            this.insertbttn.Text = "Insert";
-            this.insertbttn.UseVisualStyleBackColor = true;
-            this.insertbttn.Click += new System.EventHandler(this.insertbttn_Click);
+            this.savebttn.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.savebttn.Location = new System.Drawing.Point(43, 291);
+            this.savebttn.Name = "savebttn";
+            this.savebttn.Size = new System.Drawing.Size(126, 32);
+            this.savebttn.TabIndex = 134;
+            this.savebttn.Text = "Save";
+            this.savebttn.UseVisualStyleBackColor = false;
+            this.savebttn.Click += new System.EventHandler(this.savebttn_Click);
+            // 
+            // detailsbttn
+            // 
+            this.detailsbttn.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.detailsbttn.Location = new System.Drawing.Point(339, 291);
+            this.detailsbttn.Name = "detailsbttn";
+            this.detailsbttn.Size = new System.Drawing.Size(139, 32);
+            this.detailsbttn.TabIndex = 135;
+            this.detailsbttn.Text = "Check login data";
+            this.detailsbttn.UseVisualStyleBackColor = false;
+            this.detailsbttn.Click += new System.EventHandler(this.detailsbttn_Click);
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(524, 350);
-            this.Controls.Add(this.insertbttn);
+            this.Controls.Add(this.detailsbttn);
+            this.Controls.Add(this.savebttn);
             this.Controls.Add(this.surnamebx);
             this.Controls.Add(this.surnamelbl);
             this.Controls.Add(this.datebx);
@@ -254,7 +285,10 @@ namespace Contact_Tracing
         private System.Windows.Forms.ToolStripMenuItem qrToolStripMenuItem;
         private System.Windows.Forms.TextBox surnamebx;
         private System.Windows.Forms.Label surnamelbl;
-        private System.Windows.Forms.Button insertbttn;
+        private System.Windows.Forms.ToolStripMenuItem loginInformationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem contactFormInformationToolStripMenuItem;
+        private System.Windows.Forms.Button savebttn;
+        private System.Windows.Forms.Button detailsbttn;
     }
 }
 

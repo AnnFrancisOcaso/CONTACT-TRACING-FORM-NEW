@@ -18,6 +18,13 @@ namespace Contact_Tracing
             InitializeComponent();
         }
 
+        //Declaring variable to store information
+        String date, name, surname, temp;
+        //
+        String[] pd = new String [4];
+        List<string> personDet = new List<string>();
+        int x = 0;
+
         private void formToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Contact_Tracing_Form f2 = new Contact_Tracing_Form();
@@ -31,20 +38,54 @@ namespace Contact_Tracing
 
         }
 
+        private void loginInformationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginInfo f3 = new LoginInfo();
+            f3.Show();
+        }
+
+        private void detailsbttn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginInfo f3 = new LoginInfo();
+            f3.receiveData(personDet);
+            f3.Show();
+        }
+
+        private void savebttn_Click(object sender, EventArgs e)
+        {
+            //Making input equal variables
+            date = datebx.Text;
+            name = namebx.Text;
+            surname = surnamebx.Text;
+            temp = temperaturebx.Text;
+
+            //saving variables in an array then saving array into a list
+            pd[x] = date;
+            pd[x + 1] = name;
+            pd[x + 2] = surname;
+            pd[x + 3] = temp;
+            personDet.AddRange(pd);
+
+            MessageBox.Show("Data saved!");
+            x++;
+        }
+
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("This collect information for health purposes. This helps to monitor people who had closed contact with Covid-19 patients.", "About");
         }
 
-        private void insertbttn_Click(object sender, EventArgs e)
-        {
-            StreamWriter file = new StreamWriter(@"C:\Users\Phenyang\source\repos\Contact_Tracing\Login Information.txt");
-            file.WriteLine("Date: " + datebx.Text);
-            file.WriteLine("First Name: " + namebx.Text);
-            file.WriteLine("Surname: " + surnamebx.Text);
-            file.WriteLine("Temperature: " + temperaturebx.Text);
+        //private void insertbttn_Click(object sender, EventArgs e)
+        //{
+        //    StreamWriter file = new StreamWriter(@"C:\Users\Phenyang\source\repos\Contact_Tracing\Login Information.txt");
+        //    file.WriteLine("Date: " + datebx.Text);
+        //    file.WriteLine("First Name: " + namebx.Text);
+        //    file.WriteLine("Surname: " + surnamebx.Text);
+        //    file.WriteLine("Temperature: " + temperaturebx.Text);
 
-            file.Close();
-        }
+        //    file.Close();
+        //}
     }
 }
