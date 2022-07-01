@@ -190,9 +190,19 @@ namespace Contact_Tracing
 
             file.WriteLine("If yes, state the date of the exposure. If no, type NA. " + exposurebx.Text);
 
-
-
             file.Close();
+        }
+
+        private void checkbttn_Click(object sender, EventArgs e)
+        {
+            StreamReader reader = new StreamReader(@"C:\Users\Phenyang\source\repos\Contact_Tracing\Contact Tracing Form Information.txt");
+
+            while (!reader.EndOfStream)
+            {
+                String line = reader.ReadLine();
+                MessageBox.Show(line);
+            }
+
         }
     }
 }

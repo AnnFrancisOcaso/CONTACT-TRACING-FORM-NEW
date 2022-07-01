@@ -44,10 +44,10 @@ namespace Contact_Tracing
             this.answerslbl = new System.Windows.Forms.Label();
             this.experiencelbl = new System.Windows.Forms.Label();
             this.fevercr = new System.Windows.Forms.ToolStripContainer();
+            this.feverlbl = new System.Windows.Forms.Label();
             this.fevernorb = new System.Windows.Forms.RadioButton();
             this.feveryesrb = new System.Windows.Forms.RadioButton();
             this.submitbttn = new System.Windows.Forms.Button();
-            this.feverlbl = new System.Windows.Forms.Label();
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.coughlbl = new System.Windows.Forms.Label();
             this.coughnorb = new System.Windows.Forms.RadioButton();
@@ -64,9 +64,9 @@ namespace Contact_Tracing
             this.form2datebx = new System.Windows.Forms.TextBox();
             this.notedatelbl = new System.Windows.Forms.Label();
             this.toolStripContainer4 = new System.Windows.Forms.ToolStripContainer();
-            this.fatiguelbl = new System.Windows.Forms.Label();
             this.fatiguenorb = new System.Windows.Forms.RadioButton();
             this.fatigueyesrb = new System.Windows.Forms.RadioButton();
+            this.fatiguelbl = new System.Windows.Forms.Label();
             this.toolStripContainer5 = new System.Windows.Forms.ToolStripContainer();
             this.breathnorb = new System.Windows.Forms.RadioButton();
             this.breathyesrb = new System.Windows.Forms.RadioButton();
@@ -88,13 +88,15 @@ namespace Contact_Tracing
             this.patientyesrb = new System.Windows.Forms.RadioButton();
             this.patientlbl = new System.Windows.Forms.Label();
             this.toolStripContainer10 = new System.Windows.Forms.ToolStripContainer();
+            this.exposurebx = new System.Windows.Forms.TextBox();
             this.exposurelbl = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.exposurebx = new System.Windows.Forms.TextBox();
             this.toolStripContainer11 = new System.Windows.Forms.ToolStripContainer();
             this.gonenorb = new System.Windows.Forms.RadioButton();
             this.goneyesrb = new System.Windows.Forms.RadioButton();
             this.gonelbl = new System.Windows.Forms.Label();
+            this.checkbttn = new System.Windows.Forms.Button();
+            this.correctlbl = new System.Windows.Forms.Label();
             this.fevercr.ContentPanel.SuspendLayout();
             this.fevercr.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
@@ -125,7 +127,7 @@ namespace Contact_Tracing
             // 
             this.notelbl.AutoSize = true;
             this.notelbl.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.notelbl.Location = new System.Drawing.Point(12, 9);
+            this.notelbl.Location = new System.Drawing.Point(32, 27);
             this.notelbl.Name = "notelbl";
             this.notelbl.Size = new System.Drawing.Size(238, 16);
             this.notelbl.TabIndex = 0;
@@ -135,7 +137,7 @@ namespace Contact_Tracing
             // 
             this.profilelbl.AutoSize = true;
             this.profilelbl.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.profilelbl.Location = new System.Drawing.Point(12, 79);
+            this.profilelbl.Location = new System.Drawing.Point(32, 118);
             this.profilelbl.Name = "profilelbl";
             this.profilelbl.Size = new System.Drawing.Size(50, 16);
             this.profilelbl.TabIndex = 1;
@@ -145,7 +147,7 @@ namespace Contact_Tracing
             // 
             this.namelbl.AutoSize = true;
             this.namelbl.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.namelbl.Location = new System.Drawing.Point(30, 102);
+            this.namelbl.Location = new System.Drawing.Point(30, 148);
             this.namelbl.Name = "namelbl";
             this.namelbl.Size = new System.Drawing.Size(50, 16);
             this.namelbl.TabIndex = 2;
@@ -155,7 +157,7 @@ namespace Contact_Tracing
             // 
             this.Addresslbl.AutoSize = true;
             this.Addresslbl.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Addresslbl.Location = new System.Drawing.Point(30, 148);
+            this.Addresslbl.Location = new System.Drawing.Point(30, 194);
             this.Addresslbl.Name = "Addresslbl";
             this.Addresslbl.Size = new System.Drawing.Size(64, 16);
             this.Addresslbl.TabIndex = 3;
@@ -165,7 +167,7 @@ namespace Contact_Tracing
             // 
             this.numberlbl.AutoSize = true;
             this.numberlbl.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numberlbl.Location = new System.Drawing.Point(439, 107);
+            this.numberlbl.Location = new System.Drawing.Point(439, 153);
             this.numberlbl.Name = "numberlbl";
             this.numberlbl.Size = new System.Drawing.Size(85, 16);
             this.numberlbl.TabIndex = 4;
@@ -175,7 +177,7 @@ namespace Contact_Tracing
             // 
             this.notenamelbl.AutoSize = true;
             this.notenamelbl.Font = new System.Drawing.Font("Mongolian Baiti", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.notenamelbl.Location = new System.Drawing.Point(31, 126);
+            this.notenamelbl.Location = new System.Drawing.Point(31, 172);
             this.notenamelbl.Name = "notenamelbl";
             this.notenamelbl.Size = new System.Drawing.Size(210, 11);
             this.notenamelbl.TabIndex = 5;
@@ -183,14 +185,14 @@ namespace Contact_Tracing
             // 
             // namebx
             // 
-            this.namebx.Location = new System.Drawing.Point(100, 101);
+            this.namebx.Location = new System.Drawing.Point(100, 147);
             this.namebx.Name = "namebx";
             this.namebx.Size = new System.Drawing.Size(295, 20);
             this.namebx.TabIndex = 6;
             // 
             // addbx
             // 
-            this.addbx.Location = new System.Drawing.Point(100, 147);
+            this.addbx.Location = new System.Drawing.Point(100, 193);
             this.addbx.Name = "addbx";
             this.addbx.Size = new System.Drawing.Size(295, 20);
             this.addbx.TabIndex = 7;
@@ -199,7 +201,7 @@ namespace Contact_Tracing
             // 
             this.noteaddresslbl.AutoSize = true;
             this.noteaddresslbl.Font = new System.Drawing.Font("Mongolian Baiti", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.noteaddresslbl.Location = new System.Drawing.Point(31, 174);
+            this.noteaddresslbl.Location = new System.Drawing.Point(31, 220);
             this.noteaddresslbl.Name = "noteaddresslbl";
             this.noteaddresslbl.Size = new System.Drawing.Size(234, 11);
             this.noteaddresslbl.TabIndex = 8;
@@ -207,7 +209,7 @@ namespace Contact_Tracing
             // 
             // numberbx
             // 
-            this.numberbx.Location = new System.Drawing.Point(550, 106);
+            this.numberbx.Location = new System.Drawing.Point(550, 152);
             this.numberbx.Name = "numberbx";
             this.numberbx.Size = new System.Drawing.Size(254, 20);
             this.numberbx.TabIndex = 9;
@@ -217,7 +219,7 @@ namespace Contact_Tracing
             // 
             this.emailaddlbl.AutoSize = true;
             this.emailaddlbl.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailaddlbl.Location = new System.Drawing.Point(439, 145);
+            this.emailaddlbl.Location = new System.Drawing.Point(439, 191);
             this.emailaddlbl.Name = "emailaddlbl";
             this.emailaddlbl.Size = new System.Drawing.Size(105, 16);
             this.emailaddlbl.TabIndex = 10;
@@ -225,7 +227,7 @@ namespace Contact_Tracing
             // 
             // emailbx
             // 
-            this.emailbx.Location = new System.Drawing.Point(550, 144);
+            this.emailbx.Location = new System.Drawing.Point(550, 190);
             this.emailbx.Name = "emailbx";
             this.emailbx.Size = new System.Drawing.Size(254, 20);
             this.emailbx.TabIndex = 11;
@@ -234,7 +236,7 @@ namespace Contact_Tracing
             // 
             this.answerslbl.AutoSize = true;
             this.answerslbl.Font = new System.Drawing.Font("Mongolian Baiti", 8F, System.Drawing.FontStyle.Italic);
-            this.answerslbl.Location = new System.Drawing.Point(13, 239);
+            this.answerslbl.Location = new System.Drawing.Point(28, 269);
             this.answerslbl.Name = "answerslbl";
             this.answerslbl.Size = new System.Drawing.Size(159, 11);
             this.answerslbl.TabIndex = 12;
@@ -244,7 +246,7 @@ namespace Contact_Tracing
             // 
             this.experiencelbl.AutoSize = true;
             this.experiencelbl.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.experiencelbl.Location = new System.Drawing.Point(12, 216);
+            this.experiencelbl.Location = new System.Drawing.Point(27, 246);
             this.experiencelbl.Name = "experiencelbl";
             this.experiencelbl.Size = new System.Drawing.Size(223, 16);
             this.experiencelbl.TabIndex = 13;
@@ -262,13 +264,23 @@ namespace Contact_Tracing
             this.fevercr.ContentPanel.Controls.Add(this.feveryesrb);
             this.fevercr.ContentPanel.Size = new System.Drawing.Size(347, 64);
             this.fevercr.LeftToolStripPanelVisible = false;
-            this.fevercr.Location = new System.Drawing.Point(15, 267);
+            this.fevercr.Location = new System.Drawing.Point(48, 291);
             this.fevercr.Name = "fevercr";
             this.fevercr.RightToolStripPanelVisible = false;
             this.fevercr.Size = new System.Drawing.Size(347, 64);
             this.fevercr.TabIndex = 14;
             this.fevercr.Text = "toolStripContainer1";
             this.fevercr.TopToolStripPanelVisible = false;
+            // 
+            // feverlbl
+            // 
+            this.feverlbl.AutoSize = true;
+            this.feverlbl.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.feverlbl.Location = new System.Drawing.Point(11, 9);
+            this.feverlbl.Name = "feverlbl";
+            this.feverlbl.Size = new System.Drawing.Size(144, 16);
+            this.feverlbl.TabIndex = 16;
+            this.feverlbl.Text = "Do you have a fever?";
             // 
             // fevernorb
             // 
@@ -294,29 +306,20 @@ namespace Contact_Tracing
             // 
             // submitbttn
             // 
-            this.submitbttn.Location = new System.Drawing.Point(406, 778);
+            this.submitbttn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.submitbttn.Location = new System.Drawing.Point(48, 693);
             this.submitbttn.Name = "submitbttn";
-            this.submitbttn.Size = new System.Drawing.Size(118, 36);
+            this.submitbttn.Size = new System.Drawing.Size(150, 36);
             this.submitbttn.TabIndex = 15;
             this.submitbttn.Text = "Submit";
             this.submitbttn.UseVisualStyleBackColor = true;
             this.submitbttn.Click += new System.EventHandler(this.submitbttn_Click);
             // 
-            // feverlbl
-            // 
-            this.feverlbl.AutoSize = true;
-            this.feverlbl.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.feverlbl.Location = new System.Drawing.Point(11, 9);
-            this.feverlbl.Name = "feverlbl";
-            this.feverlbl.Size = new System.Drawing.Size(144, 16);
-            this.feverlbl.TabIndex = 16;
-            this.feverlbl.Text = "Do you have a fever?";
-            // 
             // toolStripContainer1
             // 
             this.toolStripContainer1.BottomToolStripPanelVisible = false;
             // 
-            // toolStripContainer1.coughcp
+            // toolStripContainer1.ContentPanel
             // 
             this.toolStripContainer1.ContentPanel.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.toolStripContainer1.ContentPanel.Controls.Add(this.coughlbl);
@@ -324,7 +327,7 @@ namespace Contact_Tracing
             this.toolStripContainer1.ContentPanel.Controls.Add(this.coughyesrb);
             this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(347, 64);
             this.toolStripContainer1.LeftToolStripPanelVisible = false;
-            this.toolStripContainer1.Location = new System.Drawing.Point(15, 347);
+            this.toolStripContainer1.Location = new System.Drawing.Point(48, 356);
             this.toolStripContainer1.Name = "toolStripContainer1";
             this.toolStripContainer1.RightToolStripPanelVisible = false;
             this.toolStripContainer1.Size = new System.Drawing.Size(347, 64);
@@ -368,7 +371,7 @@ namespace Contact_Tracing
             // 
             this.toolStripContainer2.BottomToolStripPanelVisible = false;
             // 
-            // toolStripContainer2.headachecp
+            // toolStripContainer2.ContentPanel
             // 
             this.toolStripContainer2.ContentPanel.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.toolStripContainer2.ContentPanel.Controls.Add(this.label1);
@@ -376,7 +379,7 @@ namespace Contact_Tracing
             this.toolStripContainer2.ContentPanel.Controls.Add(this.headacheyesrb);
             this.toolStripContainer2.ContentPanel.Size = new System.Drawing.Size(347, 64);
             this.toolStripContainer2.LeftToolStripPanelVisible = false;
-            this.toolStripContainer2.Location = new System.Drawing.Point(15, 426);
+            this.toolStripContainer2.Location = new System.Drawing.Point(48, 421);
             this.toolStripContainer2.Name = "toolStripContainer2";
             this.toolStripContainer2.RightToolStripPanelVisible = false;
             this.toolStripContainer2.Size = new System.Drawing.Size(347, 64);
@@ -420,7 +423,7 @@ namespace Contact_Tracing
             // 
             this.toolStripContainer3.BottomToolStripPanelVisible = false;
             // 
-            // toolStripContainer3.sorecp
+            // toolStripContainer3.ContentPanel
             // 
             this.toolStripContainer3.ContentPanel.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.toolStripContainer3.ContentPanel.Controls.Add(this.label2);
@@ -428,7 +431,7 @@ namespace Contact_Tracing
             this.toolStripContainer3.ContentPanel.Controls.Add(this.soreyesrb);
             this.toolStripContainer3.ContentPanel.Size = new System.Drawing.Size(347, 64);
             this.toolStripContainer3.LeftToolStripPanelVisible = false;
-            this.toolStripContainer3.Location = new System.Drawing.Point(15, 506);
+            this.toolStripContainer3.Location = new System.Drawing.Point(48, 486);
             this.toolStripContainer3.Name = "toolStripContainer3";
             this.toolStripContainer3.RightToolStripPanelVisible = false;
             this.toolStripContainer3.Size = new System.Drawing.Size(347, 64);
@@ -472,7 +475,7 @@ namespace Contact_Tracing
             // 
             this.secondformdatelbl.AutoSize = true;
             this.secondformdatelbl.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.secondformdatelbl.Location = new System.Drawing.Point(30, 37);
+            this.secondformdatelbl.Location = new System.Drawing.Point(30, 72);
             this.secondformdatelbl.Name = "secondformdatelbl";
             this.secondformdatelbl.Size = new System.Drawing.Size(42, 16);
             this.secondformdatelbl.TabIndex = 18;
@@ -480,7 +483,7 @@ namespace Contact_Tracing
             // 
             // form2datebx
             // 
-            this.form2datebx.Location = new System.Drawing.Point(100, 36);
+            this.form2datebx.Location = new System.Drawing.Point(100, 71);
             this.form2datebx.Name = "form2datebx";
             this.form2datebx.Size = new System.Drawing.Size(295, 20);
             this.form2datebx.TabIndex = 19;
@@ -489,7 +492,7 @@ namespace Contact_Tracing
             // 
             this.notedatelbl.AutoSize = true;
             this.notedatelbl.Font = new System.Drawing.Font("Mongolian Baiti", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.notedatelbl.Location = new System.Drawing.Point(33, 59);
+            this.notedatelbl.Location = new System.Drawing.Point(33, 94);
             this.notedatelbl.Name = "notedatelbl";
             this.notedatelbl.Size = new System.Drawing.Size(128, 11);
             this.notedatelbl.TabIndex = 20;
@@ -499,30 +502,20 @@ namespace Contact_Tracing
             // 
             this.toolStripContainer4.BottomToolStripPanelVisible = false;
             // 
-            // toolStripContainer4.fatiguepc
+            // toolStripContainer4.ContentPanel
             // 
             this.toolStripContainer4.ContentPanel.Controls.Add(this.fatiguenorb);
             this.toolStripContainer4.ContentPanel.Controls.Add(this.fatigueyesrb);
             this.toolStripContainer4.ContentPanel.Controls.Add(this.fatiguelbl);
             this.toolStripContainer4.ContentPanel.Size = new System.Drawing.Size(347, 64);
             this.toolStripContainer4.LeftToolStripPanelVisible = false;
-            this.toolStripContainer4.Location = new System.Drawing.Point(15, 587);
+            this.toolStripContainer4.Location = new System.Drawing.Point(48, 551);
             this.toolStripContainer4.Name = "toolStripContainer4";
             this.toolStripContainer4.RightToolStripPanelVisible = false;
             this.toolStripContainer4.Size = new System.Drawing.Size(347, 64);
             this.toolStripContainer4.TabIndex = 21;
             this.toolStripContainer4.Text = "toolStripContainer4";
             this.toolStripContainer4.TopToolStripPanelVisible = false;
-            // 
-            // fatiguelbl
-            // 
-            this.fatiguelbl.AutoSize = true;
-            this.fatiguelbl.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fatiguelbl.Location = new System.Drawing.Point(11, 11);
-            this.fatiguelbl.Name = "fatiguelbl";
-            this.fatiguelbl.Size = new System.Drawing.Size(182, 16);
-            this.fatiguelbl.TabIndex = 17;
-            this.fatiguelbl.Text = "Do you experience fatigue?";
             // 
             // fatiguenorb
             // 
@@ -546,6 +539,16 @@ namespace Contact_Tracing
             this.fatigueyesrb.Text = "Yes";
             this.fatigueyesrb.UseVisualStyleBackColor = true;
             // 
+            // fatiguelbl
+            // 
+            this.fatiguelbl.AutoSize = true;
+            this.fatiguelbl.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fatiguelbl.Location = new System.Drawing.Point(11, 11);
+            this.fatiguelbl.Name = "fatiguelbl";
+            this.fatiguelbl.Size = new System.Drawing.Size(182, 16);
+            this.fatiguelbl.TabIndex = 17;
+            this.fatiguelbl.Text = "Do you experience fatigue?";
+            // 
             // toolStripContainer5
             // 
             this.toolStripContainer5.BottomToolStripPanelVisible = false;
@@ -557,7 +560,7 @@ namespace Contact_Tracing
             this.toolStripContainer5.ContentPanel.Controls.Add(this.breathlbl);
             this.toolStripContainer5.ContentPanel.Size = new System.Drawing.Size(347, 64);
             this.toolStripContainer5.LeftToolStripPanelVisible = false;
-            this.toolStripContainer5.Location = new System.Drawing.Point(15, 666);
+            this.toolStripContainer5.Location = new System.Drawing.Point(48, 616);
             this.toolStripContainer5.Name = "toolStripContainer5";
             this.toolStripContainer5.RightToolStripPanelVisible = false;
             this.toolStripContainer5.Size = new System.Drawing.Size(347, 64);
@@ -601,14 +604,14 @@ namespace Contact_Tracing
             // 
             this.toolStripContainer6.BottomToolStripPanelVisible = false;
             // 
-            // toolStripContainer6.bodypc
+            // toolStripContainer6.ContentPanel
             // 
             this.toolStripContainer6.ContentPanel.Controls.Add(this.bodynorb);
             this.toolStripContainer6.ContentPanel.Controls.Add(this.bodyyesrb);
             this.toolStripContainer6.ContentPanel.Controls.Add(this.bodylbl);
             this.toolStripContainer6.ContentPanel.Size = new System.Drawing.Size(375, 64);
             this.toolStripContainer6.LeftToolStripPanelVisible = false;
-            this.toolStripContainer6.Location = new System.Drawing.Point(429, 267);
+            this.toolStripContainer6.Location = new System.Drawing.Point(401, 291);
             this.toolStripContainer6.Name = "toolStripContainer6";
             this.toolStripContainer6.RightToolStripPanelVisible = false;
             this.toolStripContainer6.Size = new System.Drawing.Size(375, 64);
@@ -652,14 +655,14 @@ namespace Contact_Tracing
             // 
             this.toolStripContainer7.BottomToolStripPanelVisible = false;
             // 
-            // toolStripContainer7.diarrheapc
+            // toolStripContainer7.ContentPanel
             // 
             this.toolStripContainer7.ContentPanel.Controls.Add(this.diarrheanorb);
             this.toolStripContainer7.ContentPanel.Controls.Add(this.diarrheayesrb);
             this.toolStripContainer7.ContentPanel.Controls.Add(this.diarrhealbl);
             this.toolStripContainer7.ContentPanel.Size = new System.Drawing.Size(375, 64);
             this.toolStripContainer7.LeftToolStripPanelVisible = false;
-            this.toolStripContainer7.Location = new System.Drawing.Point(429, 347);
+            this.toolStripContainer7.Location = new System.Drawing.Point(401, 356);
             this.toolStripContainer7.Name = "toolStripContainer7";
             this.toolStripContainer7.RightToolStripPanelVisible = false;
             this.toolStripContainer7.Size = new System.Drawing.Size(375, 64);
@@ -703,14 +706,14 @@ namespace Contact_Tracing
             // 
             this.toolStripContainer8.BottomToolStripPanelVisible = false;
             // 
-            // toolStripContainer8.smellpc
+            // toolStripContainer8.ContentPanel
             // 
             this.toolStripContainer8.ContentPanel.Controls.Add(this.smellnorb);
             this.toolStripContainer8.ContentPanel.Controls.Add(this.smellyesrb);
             this.toolStripContainer8.ContentPanel.Controls.Add(this.smelllbl);
             this.toolStripContainer8.ContentPanel.Size = new System.Drawing.Size(375, 64);
             this.toolStripContainer8.LeftToolStripPanelVisible = false;
-            this.toolStripContainer8.Location = new System.Drawing.Point(429, 426);
+            this.toolStripContainer8.Location = new System.Drawing.Point(401, 421);
             this.toolStripContainer8.Name = "toolStripContainer8";
             this.toolStripContainer8.RightToolStripPanelVisible = false;
             this.toolStripContainer8.Size = new System.Drawing.Size(375, 64);
@@ -754,14 +757,14 @@ namespace Contact_Tracing
             // 
             this.toolStripContainer9.BottomToolStripPanelVisible = false;
             // 
-            // toolStripContainer9.patientpc
+            // toolStripContainer9.ContentPanel
             // 
             this.toolStripContainer9.ContentPanel.Controls.Add(this.patientnorb);
             this.toolStripContainer9.ContentPanel.Controls.Add(this.patientyesrb);
             this.toolStripContainer9.ContentPanel.Controls.Add(this.patientlbl);
             this.toolStripContainer9.ContentPanel.Size = new System.Drawing.Size(375, 64);
             this.toolStripContainer9.LeftToolStripPanelVisible = false;
-            this.toolStripContainer9.Location = new System.Drawing.Point(429, 587);
+            this.toolStripContainer9.Location = new System.Drawing.Point(401, 551);
             this.toolStripContainer9.Name = "toolStripContainer9";
             this.toolStripContainer9.RightToolStripPanelVisible = false;
             this.toolStripContainer9.Size = new System.Drawing.Size(375, 64);
@@ -805,19 +808,26 @@ namespace Contact_Tracing
             // 
             this.toolStripContainer10.BottomToolStripPanelVisible = false;
             // 
-            // toolStripContainer10.exposurepc
+            // toolStripContainer10.ContentPanel
             // 
             this.toolStripContainer10.ContentPanel.Controls.Add(this.exposurebx);
             this.toolStripContainer10.ContentPanel.Controls.Add(this.exposurelbl);
             this.toolStripContainer10.ContentPanel.Size = new System.Drawing.Size(375, 64);
             this.toolStripContainer10.LeftToolStripPanelVisible = false;
-            this.toolStripContainer10.Location = new System.Drawing.Point(429, 668);
+            this.toolStripContainer10.Location = new System.Drawing.Point(401, 617);
             this.toolStripContainer10.Name = "toolStripContainer10";
             this.toolStripContainer10.RightToolStripPanelVisible = false;
             this.toolStripContainer10.Size = new System.Drawing.Size(375, 64);
             this.toolStripContainer10.TabIndex = 27;
             this.toolStripContainer10.Text = "toolStripContainer10";
             this.toolStripContainer10.TopToolStripPanelVisible = false;
+            // 
+            // exposurebx
+            // 
+            this.exposurebx.Location = new System.Drawing.Point(14, 34);
+            this.exposurebx.Name = "exposurebx";
+            this.exposurebx.Size = new System.Drawing.Size(254, 20);
+            this.exposurebx.TabIndex = 29;
             // 
             // exposurelbl
             // 
@@ -833,30 +843,23 @@ namespace Contact_Tracing
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Mongolian Baiti", 8F, System.Drawing.FontStyle.Italic);
-            this.label4.Location = new System.Drawing.Point(604, 681);
+            this.label4.Location = new System.Drawing.Point(604, 594);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(0, 11);
             this.label4.TabIndex = 28;
-            // 
-            // exposurebx
-            // 
-            this.exposurebx.Location = new System.Drawing.Point(14, 34);
-            this.exposurebx.Name = "exposurebx";
-            this.exposurebx.Size = new System.Drawing.Size(254, 20);
-            this.exposurebx.TabIndex = 29;
             // 
             // toolStripContainer11
             // 
             this.toolStripContainer11.BottomToolStripPanelVisible = false;
             // 
-            // toolStripContainer11.gonepc
+            // toolStripContainer11.ContentPanel
             // 
             this.toolStripContainer11.ContentPanel.Controls.Add(this.gonenorb);
             this.toolStripContainer11.ContentPanel.Controls.Add(this.goneyesrb);
             this.toolStripContainer11.ContentPanel.Controls.Add(this.gonelbl);
             this.toolStripContainer11.ContentPanel.Size = new System.Drawing.Size(375, 64);
             this.toolStripContainer11.LeftToolStripPanelVisible = false;
-            this.toolStripContainer11.Location = new System.Drawing.Point(429, 506);
+            this.toolStripContainer11.Location = new System.Drawing.Point(401, 486);
             this.toolStripContainer11.Name = "toolStripContainer11";
             this.toolStripContainer11.RightToolStripPanelVisible = false;
             this.toolStripContainer11.Size = new System.Drawing.Size(375, 64);
@@ -896,11 +899,34 @@ namespace Contact_Tracing
             this.gonelbl.TabIndex = 17;
             this.gonelbl.Text = "Have you gone somewhere outside your residence city?";
             // 
+            // checkbttn
+            // 
+            this.checkbttn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkbttn.Location = new System.Drawing.Point(48, 735);
+            this.checkbttn.Name = "checkbttn";
+            this.checkbttn.Size = new System.Drawing.Size(150, 36);
+            this.checkbttn.TabIndex = 30;
+            this.checkbttn.Text = "Check Record";
+            this.checkbttn.UseVisualStyleBackColor = true;
+            this.checkbttn.Click += new System.EventHandler(this.checkbttn_Click);
+            // 
+            // correctlbl
+            // 
+            this.correctlbl.AutoSize = true;
+            this.correctlbl.Font = new System.Drawing.Font("Mongolian Baiti", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.correctlbl.Location = new System.Drawing.Point(46, 779);
+            this.correctlbl.Name = "correctlbl";
+            this.correctlbl.Size = new System.Drawing.Size(225, 11);
+            this.correctlbl.TabIndex = 31;
+            this.correctlbl.Text = "After submitting, check if all details are correct.";
+            // 
             // Contact_Tracing_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(828, 841);
+            this.ClientSize = new System.Drawing.Size(828, 804);
+            this.Controls.Add(this.correctlbl);
+            this.Controls.Add(this.checkbttn);
             this.Controls.Add(this.toolStripContainer11);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.toolStripContainer10);
@@ -932,6 +958,7 @@ namespace Contact_Tracing
             this.Controls.Add(this.namelbl);
             this.Controls.Add(this.profilelbl);
             this.Controls.Add(this.notelbl);
+            this.MaximizeBox = false;
             this.Name = "Contact_Tracing_Form";
             this.Text = "Contact Tracing Form";
             this.fevercr.ContentPanel.ResumeLayout(false);
@@ -1055,5 +1082,7 @@ namespace Contact_Tracing
         private System.Windows.Forms.RadioButton gonenorb;
         private System.Windows.Forms.RadioButton goneyesrb;
         private System.Windows.Forms.Label gonelbl;
+        private System.Windows.Forms.Button checkbttn;
+        private System.Windows.Forms.Label correctlbl;
     }
 }
