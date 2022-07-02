@@ -18,7 +18,6 @@ namespace Contact_Tracing
             InitializeComponent();
         }
 
-        //Declaring variable to store information
         String date, name, surname, temp;
         //
         String[] pd = new String [4];

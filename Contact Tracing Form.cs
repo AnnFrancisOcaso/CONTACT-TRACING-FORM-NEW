@@ -18,6 +18,114 @@ namespace Contact_Tracing
             InitializeComponent();
         }
 
+        String dt, nm, add, cn, ea, dfever, ddryc, dheadache, dsoret, dfatigue, dshortb, dbodya, ddia, dsmell, dcity, dpatient, dexposure;
+
+        private void checkbttn2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Contact_Tracing_Information f4 = new Contact_Tracing_Information();
+            f4.receiveData(contactInformation);
+            f4.Show();
+        }
+
+        String[] ct = new String[17];
+        List<string> contactInformation = new List<string>();
+        int f = 0;
+
+
+        private void savebttn3_Click(object sender, EventArgs e)
+        {
+            //Making input equal variables
+            dt = form2datebx.Text;
+            nm = namebx.Text;
+            cn = numberbx.Text;
+            add = addbx.Text;
+            ea = emailbx.Text;
+            //
+            if (feveryesrb.Checked)
+                dfever = feveryesrb.Text;
+            if (fevernorb.Checked)
+                dfever = fevernorb.Text;
+            //
+            if (coughyesrb.Checked)
+                ddryc = coughyesrb.Text;
+            if (coughnorb.Checked)
+                ddryc = coughnorb.Text;
+            //
+            if (headacheyesrb.Checked)
+                dheadache = headacheyesrb.Text;
+            if (headachenorb.Checked)
+                dheadache = headachenorb.Text;
+            //
+            if (soreyesrb.Checked)
+                dsoret = soreyesrb.Text;
+            if (sorenorb.Checked)
+                dsoret = sorenorb.Text;
+            //
+            if (fatigueyesrb.Checked)
+                dfatigue = fatigueyesrb.Text;
+            if (fatiguenorb.Checked)
+                dfatigue = fatiguenorb.Text;
+            //
+            if (breathyesrb.Checked)
+                dshortb = breathyesrb.Text;
+            if (breathnorb.Checked)
+                dshortb = breathnorb.Text;
+            //
+            if (bodyyesrb.Checked)
+                dbodya = bodyyesrb.Text;
+            if (bodynorb.Checked)
+                dbodya = bodynorb.Text;
+            //
+            if (diarrheayesrb.Checked)
+                ddia = diarrheayesrb.Text;
+            if (diarrheanorb.Checked)
+                ddia = diarrheanorb.Text;
+            //
+            if (smellyesrb.Checked)
+                dsmell = smellyesrb.Text;
+            if (smellnorb.Checked)
+                dsmell = smellnorb.Text;
+            //
+            if (goneyesrb.Checked)
+                dcity = goneyesrb.Text;
+            if (gonenorb.Checked)
+                dcity = gonenorb.Text;
+            //
+            if (patientyesrb.Checked)
+                dpatient = patientyesrb.Text;
+            if (patientnorb.Checked)
+                dpatient = patientnorb.Text;
+            //
+            dexposure = exposurebx.Text;
+
+
+
+            //saving variables in an array then saving array into a list
+            ct[f] = dt;
+            ct[f + 1] = nm;
+            ct[f + 2] = add;
+            ct[f + 3] = cn;
+            ct[f + 4] = ea;
+            ct[f + 5] = dfever;
+            ct[f + 6] = ddryc;
+            ct[f + 7] = dheadache;
+            ct[f + 8] = dsoret;
+            ct[f + 9] = dfatigue;
+            ct[f + 10] = dshortb;
+            ct[f + 11] = dbodya;
+            ct[f + 12] = ddia;
+            ct[f + 13] = dsmell;
+            ct[f + 14] = dcity;
+            ct[f + 15] = dpatient;
+            ct[f + 16] = dexposure;
+            contactInformation.AddRange(ct);
+
+            MessageBox.Show("Data saved!");
+            f++;
+        }
+
+
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
 

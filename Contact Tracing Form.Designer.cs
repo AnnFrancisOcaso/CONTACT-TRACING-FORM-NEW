@@ -97,6 +97,8 @@ namespace Contact_Tracing
             this.gonelbl = new System.Windows.Forms.Label();
             this.checkbttn = new System.Windows.Forms.Button();
             this.correctlbl = new System.Windows.Forms.Label();
+            this.savebttn3 = new System.Windows.Forms.Button();
+            this.checkbttn2 = new System.Windows.Forms.Button();
             this.fevercr.ContentPanel.SuspendLayout();
             this.fevercr.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
@@ -920,11 +922,35 @@ namespace Contact_Tracing
             this.correctlbl.TabIndex = 31;
             this.correctlbl.Text = "After submitting, check if all details are correct.";
             // 
+            // savebttn3
+            // 
+            this.savebttn3.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.savebttn3.Location = new System.Drawing.Point(254, 693);
+            this.savebttn3.Name = "savebttn3";
+            this.savebttn3.Size = new System.Drawing.Size(150, 36);
+            this.savebttn3.TabIndex = 32;
+            this.savebttn3.Text = "Save";
+            this.savebttn3.UseVisualStyleBackColor = false;
+            this.savebttn3.Click += new System.EventHandler(this.savebttn3_Click);
+            // 
+            // checkbttn2
+            // 
+            this.checkbttn2.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkbttn2.Location = new System.Drawing.Point(254, 735);
+            this.checkbttn2.Name = "checkbttn2";
+            this.checkbttn2.Size = new System.Drawing.Size(150, 36);
+            this.checkbttn2.TabIndex = 33;
+            this.checkbttn2.Text = "Check records";
+            this.checkbttn2.UseVisualStyleBackColor = false;
+            this.checkbttn2.Click += new System.EventHandler(this.checkbttn2_Click);
+            // 
             // Contact_Tracing_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(828, 804);
+            this.Controls.Add(this.checkbttn2);
+            this.Controls.Add(this.savebttn3);
             this.Controls.Add(this.correctlbl);
             this.Controls.Add(this.checkbttn);
             this.Controls.Add(this.toolStripContainer11);
@@ -1084,5 +1110,7 @@ namespace Contact_Tracing
         private System.Windows.Forms.Label gonelbl;
         private System.Windows.Forms.Button checkbttn;
         private System.Windows.Forms.Label correctlbl;
+        private System.Windows.Forms.Button savebttn3;
+        private System.Windows.Forms.Button checkbttn2;
     }
 }

@@ -44,7 +44,7 @@ namespace Contact_Tracing
 
             //Adding rows to datatable
             dt.Rows.Add(usIn);
-            dataGridView1.DataSource = dt;
+            dataGridViewLogin.DataSource = dt;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -56,16 +56,16 @@ namespace Contact_Tracing
         {
             using (StreamWriter tw = new StreamWriter(@"C:\Users\Phenyang\source\repos\Contact_Tracing\List Login.txt"))
             {
-                for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+                for (int i = 0; i < dataGridViewLogin.Rows.Count - 1; i++)
                 {
-                    for (int j = 0; j < dataGridView1.Columns.Count; j++)
+                    for (int j = 0; j < dataGridViewLogin.Columns.Count; j++)
                     {
-                        tw.WriteLine($"{dataGridView1.Rows[i].Cells[j].Value.ToString()},");
+                        tw.WriteLine($"{dataGridViewLogin.Rows[i].Cells[j].Value.ToString()},");
                     }
                 }
             }
 
-            MessageBox.Show("Save Information!");
+            MessageBox.Show("Information saved!");
         }
     }
 }

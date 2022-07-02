@@ -29,20 +29,20 @@ namespace Contact_Tracing
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewLogin = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLogin)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridViewLogin
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 60);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(520, 254);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridViewLogin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewLogin.Location = new System.Drawing.Point(12, 60);
+            this.dataGridViewLogin.Name = "dataGridViewLogin";
+            this.dataGridViewLogin.Size = new System.Drawing.Size(520, 254);
+            this.dataGridViewLogin.TabIndex = 0;
+            this.dataGridViewLogin.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // button1
             // 
@@ -72,11 +72,11 @@ namespace Contact_Tracing
             this.ClientSize = new System.Drawing.Size(544, 375);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewLogin);
             this.Name = "LoginInfo";
             this.Text = "List of Records";
             this.Load += new System.EventHandler(this.List_of_Records_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLogin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -84,7 +84,7 @@ namespace Contact_Tracing
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewLogin;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
     }

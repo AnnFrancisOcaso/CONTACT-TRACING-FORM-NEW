@@ -10,3 +10,4 @@ C:\Users\Phenyang\source\repos\Contact_Tracing\obj\Debug\Contact_Tracing.exe
 C:\Users\Phenyang\source\repos\Contact_Tracing\obj\Debug\Contact_Tracing.pdb
 C:\Users\Phenyang\source\repos\Contact_Tracing\obj\Debug\Contact_Tracing.Contact_Tracing_Form.resources
 C:\Users\Phenyang\source\repos\Contact_Tracing\obj\Debug\Contact_Tracing.LoginInfo.resources
+C:\Users\Phenyang\source\repos\Contact_Tracing\obj\Debug\Contact_Tracing.Contact_Tracing_Information.resources
