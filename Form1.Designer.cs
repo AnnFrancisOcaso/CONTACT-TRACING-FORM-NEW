@@ -196,6 +196,7 @@ namespace Contact_Tracing
             this.qrToolStripMenuItem.Name = "qrToolStripMenuItem";
             this.qrToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.qrToolStripMenuItem.Text = "Qr";
+            this.qrToolStripMenuItem.Click += new System.EventHandler(this.qrToolStripMenuItem_Click);
             // 
             // surnamebx
             // 

@@ -44,6 +44,13 @@ namespace Contact_Tracing
             f3.Show();
         }
 
+        private void qrToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            QR_code f5 = new QR_code();
+            f5.Show();
+        }
+
         private void detailsbttn_Click(object sender, EventArgs e)
         {
             this.Hide();

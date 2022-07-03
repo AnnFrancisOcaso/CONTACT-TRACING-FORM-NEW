@@ -47,7 +47,7 @@ namespace Contact_Tracing
             this.feverlbl = new System.Windows.Forms.Label();
             this.fevernorb = new System.Windows.Forms.RadioButton();
             this.feveryesrb = new System.Windows.Forms.RadioButton();
-            this.submitbttn = new System.Windows.Forms.Button();
+            this.storebttn = new System.Windows.Forms.Button();
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.coughlbl = new System.Windows.Forms.Label();
             this.coughnorb = new System.Windows.Forms.RadioButton();
@@ -95,10 +95,10 @@ namespace Contact_Tracing
             this.gonenorb = new System.Windows.Forms.RadioButton();
             this.goneyesrb = new System.Windows.Forms.RadioButton();
             this.gonelbl = new System.Windows.Forms.Label();
-            this.checkbttn = new System.Windows.Forms.Button();
             this.correctlbl = new System.Windows.Forms.Label();
             this.savebttn3 = new System.Windows.Forms.Button();
             this.checkbttn2 = new System.Windows.Forms.Button();
+            this.homebttn = new System.Windows.Forms.Button();
             this.fevercr.ContentPanel.SuspendLayout();
             this.fevercr.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
@@ -306,16 +306,16 @@ namespace Contact_Tracing
             this.feveryesrb.Text = "Yes";
             this.feveryesrb.UseVisualStyleBackColor = true;
             // 
-            // submitbttn
+            // storebttn
             // 
-            this.submitbttn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.submitbttn.Location = new System.Drawing.Point(48, 693);
-            this.submitbttn.Name = "submitbttn";
-            this.submitbttn.Size = new System.Drawing.Size(150, 36);
-            this.submitbttn.TabIndex = 15;
-            this.submitbttn.Text = "Submit";
-            this.submitbttn.UseVisualStyleBackColor = true;
-            this.submitbttn.Click += new System.EventHandler(this.submitbttn_Click);
+            this.storebttn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storebttn.Location = new System.Drawing.Point(688, 687);
+            this.storebttn.Name = "storebttn";
+            this.storebttn.Size = new System.Drawing.Size(88, 36);
+            this.storebttn.TabIndex = 15;
+            this.storebttn.Text = "Store Data";
+            this.storebttn.UseVisualStyleBackColor = false;
+            this.storebttn.Click += new System.EventHandler(this.submitbttn_Click);
             // 
             // toolStripContainer1
             // 
@@ -901,17 +901,6 @@ namespace Contact_Tracing
             this.gonelbl.TabIndex = 17;
             this.gonelbl.Text = "Have you gone somewhere outside your residence city?";
             // 
-            // checkbttn
-            // 
-            this.checkbttn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkbttn.Location = new System.Drawing.Point(48, 735);
-            this.checkbttn.Name = "checkbttn";
-            this.checkbttn.Size = new System.Drawing.Size(150, 36);
-            this.checkbttn.TabIndex = 30;
-            this.checkbttn.Text = "Check Record";
-            this.checkbttn.UseVisualStyleBackColor = true;
-            this.checkbttn.Click += new System.EventHandler(this.checkbttn_Click);
-            // 
             // correctlbl
             // 
             this.correctlbl.AutoSize = true;
@@ -925,7 +914,7 @@ namespace Contact_Tracing
             // savebttn3
             // 
             this.savebttn3.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.savebttn3.Location = new System.Drawing.Point(254, 693);
+            this.savebttn3.Location = new System.Drawing.Point(48, 686);
             this.savebttn3.Name = "savebttn3";
             this.savebttn3.Size = new System.Drawing.Size(150, 36);
             this.savebttn3.TabIndex = 32;
@@ -936,7 +925,7 @@ namespace Contact_Tracing
             // checkbttn2
             // 
             this.checkbttn2.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkbttn2.Location = new System.Drawing.Point(254, 735);
+            this.checkbttn2.Location = new System.Drawing.Point(48, 728);
             this.checkbttn2.Name = "checkbttn2";
             this.checkbttn2.Size = new System.Drawing.Size(150, 36);
             this.checkbttn2.TabIndex = 33;
@@ -944,15 +933,27 @@ namespace Contact_Tracing
             this.checkbttn2.UseVisualStyleBackColor = false;
             this.checkbttn2.Click += new System.EventHandler(this.checkbttn2_Click);
             // 
+            // homebttn
+            // 
+            this.homebttn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.homebttn.Location = new System.Drawing.Point(716, 27);
+            this.homebttn.Name = "homebttn";
+            this.homebttn.Size = new System.Drawing.Size(88, 36);
+            this.homebttn.TabIndex = 34;
+            this.homebttn.Text = "Home";
+            this.homebttn.UseVisualStyleBackColor = false;
+            this.homebttn.Click += new System.EventHandler(this.homebttn_Click);
+            // 
             // Contact_Tracing_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(828, 804);
+            this.Controls.Add(this.homebttn);
             this.Controls.Add(this.checkbttn2);
             this.Controls.Add(this.savebttn3);
             this.Controls.Add(this.correctlbl);
-            this.Controls.Add(this.checkbttn);
+            this.Controls.Add(this.storebttn);
             this.Controls.Add(this.toolStripContainer11);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.toolStripContainer10);
@@ -968,7 +969,6 @@ namespace Contact_Tracing
             this.Controls.Add(this.toolStripContainer3);
             this.Controls.Add(this.toolStripContainer2);
             this.Controls.Add(this.toolStripContainer1);
-            this.Controls.Add(this.submitbttn);
             this.Controls.Add(this.fevercr);
             this.Controls.Add(this.experiencelbl);
             this.Controls.Add(this.answerslbl);
@@ -1059,7 +1059,7 @@ namespace Contact_Tracing
         private System.Windows.Forms.ToolStripContainer fevercr;
         private System.Windows.Forms.RadioButton feveryesrb;
         private System.Windows.Forms.RadioButton fevernorb;
-        private System.Windows.Forms.Button submitbttn;
+        private System.Windows.Forms.Button storebttn;
         private System.Windows.Forms.Label feverlbl;
         private System.Windows.Forms.ToolStripContainer toolStripContainer1;
         private System.Windows.Forms.Label coughlbl;
@@ -1108,9 +1108,9 @@ namespace Contact_Tracing
         private System.Windows.Forms.RadioButton gonenorb;
         private System.Windows.Forms.RadioButton goneyesrb;
         private System.Windows.Forms.Label gonelbl;
-        private System.Windows.Forms.Button checkbttn;
         private System.Windows.Forms.Label correctlbl;
         private System.Windows.Forms.Button savebttn3;
         private System.Windows.Forms.Button checkbttn2;
+        private System.Windows.Forms.Button homebttn;
     }
 }

@@ -1,17 +1,5 @@
-Name: Ann Francis
-Contact no.: 09565073838
-Address: J.Estrada 2 Sucar Paranaque City
-Email Address: ocasoannfrancis100202@gmail.com
-Do you have a fever? Yes
-Do you have a dry cough? No
-Do you experience headache? Yes
-Do you have sore throat? Yes
-Do you have sore throat? No
-Do you experience fatigue? Yes
-Do you experience shortness of breath? Yes
-Do you experience body ache? No
-Do you experience diarrhea? No
-Do you experience loss of smell? Yes
-Have you gone somewhere outside your residence city? No
-Have you had close contact with a Covid 19 patient? No
-If yes, state the date of the exposure. If no, type NA. NA
+Name: 
+Contact no.: 
+Address: 
+Email Address: 
+If yes, state the date of the exposure. If no, type NA. 

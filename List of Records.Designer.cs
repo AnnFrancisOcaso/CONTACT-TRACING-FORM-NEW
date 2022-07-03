@@ -47,7 +47,7 @@ namespace Contact_Tracing
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Mongolian Baiti", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(197, 333);
+            this.button1.Location = new System.Drawing.Point(203, 333);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(148, 30);
             this.button1.TabIndex = 1;

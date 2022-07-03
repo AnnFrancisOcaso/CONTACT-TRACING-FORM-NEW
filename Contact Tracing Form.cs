@@ -20,6 +20,13 @@ namespace Contact_Tracing
 
         String dt, nm, add, cn, ea, dfever, ddryc, dheadache, dsoret, dfatigue, dshortb, dbodya, ddia, dsmell, dcity, dpatient, dexposure;
 
+        private void homebttn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login f1 = new Login();
+            f1.Show();
+        }
+
         private void checkbttn2_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -301,16 +308,16 @@ namespace Contact_Tracing
             file.Close();
         }
 
-        private void checkbttn_Click(object sender, EventArgs e)
-        {
-            StreamReader reader = new StreamReader(@"C:\Users\Phenyang\source\repos\Contact_Tracing\Contact Tracing Form Information.txt");
+        //private void checkbttn_Click(object sender, EventArgs e)
+        //{
+        //    StreamReader reader = new StreamReader(@"C:\Users\Phenyang\source\repos\Contact_Tracing\Contact Tracing Form Information.txt");
 
-            while (!reader.EndOfStream)
-            {
-                String line = reader.ReadLine();
-                MessageBox.Show(line);
-            }
+        //    while (!reader.EndOfStream)
+        //    {
+        //        String line = reader.ReadLine();
+        //        MessageBox.Show(line);
+        //    }
 
-        }
+        //}
     }
 }
