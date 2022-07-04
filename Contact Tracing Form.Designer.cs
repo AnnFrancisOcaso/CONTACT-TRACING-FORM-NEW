@@ -99,6 +99,10 @@ namespace Contact_Tracing
             this.savebttn3 = new System.Windows.Forms.Button();
             this.checkbttn2 = new System.Windows.Forms.Button();
             this.homebttn = new System.Windows.Forms.Button();
+            this.pictureboxqr = new System.Windows.Forms.PictureBox();
+            this.generatebttn = new System.Windows.Forms.Button();
+            this.qrlbl = new System.Windows.Forms.Label();
+            this.infoqrlbl = new System.Windows.Forms.Label();
             this.fevercr.ContentPanel.SuspendLayout();
             this.fevercr.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
@@ -123,6 +127,7 @@ namespace Contact_Tracing
             this.toolStripContainer10.SuspendLayout();
             this.toolStripContainer11.ContentPanel.SuspendLayout();
             this.toolStripContainer11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureboxqr)).BeginInit();
             this.SuspendLayout();
             // 
             // notelbl
@@ -309,9 +314,9 @@ namespace Contact_Tracing
             // storebttn
             // 
             this.storebttn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.storebttn.Location = new System.Drawing.Point(688, 687);
+            this.storebttn.Location = new System.Drawing.Point(626, 695);
             this.storebttn.Name = "storebttn";
-            this.storebttn.Size = new System.Drawing.Size(88, 36);
+            this.storebttn.Size = new System.Drawing.Size(150, 36);
             this.storebttn.TabIndex = 15;
             this.storebttn.Text = "Store Data";
             this.storebttn.UseVisualStyleBackColor = false;
@@ -944,11 +949,56 @@ namespace Contact_Tracing
             this.homebttn.UseVisualStyleBackColor = false;
             this.homebttn.Click += new System.EventHandler(this.homebttn_Click);
             // 
+            // pictureboxqr
+            // 
+            this.pictureboxqr.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureboxqr.Location = new System.Drawing.Point(806, 529);
+            this.pictureboxqr.Name = "pictureboxqr";
+            this.pictureboxqr.Size = new System.Drawing.Size(182, 142);
+            this.pictureboxqr.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureboxqr.TabIndex = 35;
+            this.pictureboxqr.TabStop = false;
+            // 
+            // generatebttn
+            // 
+            this.generatebttn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generatebttn.Location = new System.Drawing.Point(853, 695);
+            this.generatebttn.Name = "generatebttn";
+            this.generatebttn.Size = new System.Drawing.Size(88, 36);
+            this.generatebttn.TabIndex = 36;
+            this.generatebttn.Text = "Generate QR";
+            this.generatebttn.UseVisualStyleBackColor = false;
+            this.generatebttn.Click += new System.EventHandler(this.generatebttn_Click);
+            // 
+            // qrlbl
+            // 
+            this.qrlbl.AutoSize = true;
+            this.qrlbl.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.qrlbl.Location = new System.Drawing.Point(803, 495);
+            this.qrlbl.Name = "qrlbl";
+            this.qrlbl.Size = new System.Drawing.Size(187, 14);
+            this.qrlbl.TabIndex = 37;
+            this.qrlbl.Text = "Here is the generated QR code of ";
+            // 
+            // infoqrlbl
+            // 
+            this.infoqrlbl.AutoSize = true;
+            this.infoqrlbl.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.infoqrlbl.Location = new System.Drawing.Point(803, 512);
+            this.infoqrlbl.Name = "infoqrlbl";
+            this.infoqrlbl.Size = new System.Drawing.Size(102, 14);
+            this.infoqrlbl.TabIndex = 38;
+            this.infoqrlbl.Text = "your information.";
+            // 
             // Contact_Tracing_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(828, 804);
+            this.ClientSize = new System.Drawing.Size(1021, 804);
+            this.Controls.Add(this.infoqrlbl);
+            this.Controls.Add(this.qrlbl);
+            this.Controls.Add(this.generatebttn);
+            this.Controls.Add(this.pictureboxqr);
             this.Controls.Add(this.homebttn);
             this.Controls.Add(this.checkbttn2);
             this.Controls.Add(this.savebttn3);
@@ -1035,6 +1085,7 @@ namespace Contact_Tracing
             this.toolStripContainer11.ContentPanel.PerformLayout();
             this.toolStripContainer11.ResumeLayout(false);
             this.toolStripContainer11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureboxqr)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1112,5 +1163,9 @@ namespace Contact_Tracing
         private System.Windows.Forms.Button savebttn3;
         private System.Windows.Forms.Button checkbttn2;
         private System.Windows.Forms.Button homebttn;
+        private System.Windows.Forms.PictureBox pictureboxqr;
+        private System.Windows.Forms.Button generatebttn;
+        private System.Windows.Forms.Label qrlbl;
+        private System.Windows.Forms.Label infoqrlbl;
     }
 }

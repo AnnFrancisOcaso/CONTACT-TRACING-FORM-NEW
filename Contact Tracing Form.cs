@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ZXing;
 
 namespace Contact_Tracing
 {
@@ -19,6 +20,18 @@ namespace Contact_Tracing
         }
 
         String dt, nm, add, cn, ea, dfever, ddryc, dheadache, dsoret, dfatigue, dshortb, dbodya, ddia, dsmell, dcity, dpatient, dexposure;
+
+        private void generatebttn_Click(object sender, EventArgs e)
+        {
+            string qrData = form2datebx.Text + "," + namebx.Text + "," + numberbx.Text + "," + addbx.Text + "," + emailbx.Text + "," + exposurebx.Text;
+            string qrImageFileName = namebx.Text;
+
+            BarcodeWriter barcode = new BarcodeWriter();
+            barcode.Format = BarcodeFormat.QR_CODE;
+
+            barcode.Write(qrData).Save(@"C:\Users\Phenyang\source\repos\Contact_Tracing\qr info\" + qrImageFileName + ".png");
+            pictureboxqr.Image = Image.FromFile(@"C:\Users\Phenyang\source\repos\Contact_Tracing\qr info\" + qrImageFileName + ".png");
+        }
 
         private void homebttn_Click(object sender, EventArgs e)
         {
