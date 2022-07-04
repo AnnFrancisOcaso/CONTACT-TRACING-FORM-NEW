@@ -21,6 +21,13 @@ namespace Contact_Tracing
 
         String dt, nm, add, cn, ea, dfever, ddryc, dheadache, dsoret, dfatigue, dshortb, dbodya, ddia, dsmell, dcity, dpatient, dexposure;
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            StreamReader data = new StreamReader(@"C:\Users\Phenyang\source\repos\Contact_Tracing\Contact Tracing Form Information.txt");
+            MessageBox.Show(data.ReadToEnd());
+            data.Close();
+        }
+
         private void generatebttn_Click(object sender, EventArgs e)
         {
             string qrData = form2datebx.Text + "," + namebx.Text + "," + numberbx.Text + "," + addbx.Text + "," + emailbx.Text + "," + exposurebx.Text;

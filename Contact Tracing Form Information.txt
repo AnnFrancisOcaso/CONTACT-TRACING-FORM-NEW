@@ -1,5 +1,17 @@
-Name: 
-Contact no.: 
-Address: 
-Email Address: 
+Name: Ann Francis 
+Contact no.: 12345678912
+Address: Estrada
+Email Address: ocasoannfrancis@gmail.com
+Do you have a fever? Yes
+Do you have a dry cough? No
+Do you experience headache? Yes
+Do you have sore throat? Yes
+Do you have sore throat? No
+Do you experience fatigue? Yes
+Do you experience shortness of breath? No
+Do you experience body ache? Yes
+Do you experience diarrhea? No
+Do you experience loss of smell? Yes
+Have you gone somewhere outside your residence city? No
+Have you had close contact with a Covid 19 patient? No
 If yes, state the date of the exposure. If no, type NA. 
