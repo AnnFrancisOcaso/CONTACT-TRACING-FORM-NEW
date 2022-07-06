@@ -45,21 +45,13 @@ namespace Contact_Tracing
             this.experiencelbl = new System.Windows.Forms.Label();
             this.fevercr = new System.Windows.Forms.ToolStripContainer();
             this.feverlbl = new System.Windows.Forms.Label();
-            this.fevernorb = new System.Windows.Forms.RadioButton();
-            this.feveryesrb = new System.Windows.Forms.RadioButton();
             this.storebttn = new System.Windows.Forms.Button();
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.coughlbl = new System.Windows.Forms.Label();
-            this.coughnorb = new System.Windows.Forms.RadioButton();
-            this.coughyesrb = new System.Windows.Forms.RadioButton();
             this.toolStripContainer2 = new System.Windows.Forms.ToolStripContainer();
             this.label1 = new System.Windows.Forms.Label();
-            this.headachenorb = new System.Windows.Forms.RadioButton();
-            this.headacheyesrb = new System.Windows.Forms.RadioButton();
             this.toolStripContainer3 = new System.Windows.Forms.ToolStripContainer();
             this.label2 = new System.Windows.Forms.Label();
-            this.sorenorb = new System.Windows.Forms.RadioButton();
-            this.soreyesrb = new System.Windows.Forms.RadioButton();
             this.secondformdatelbl = new System.Windows.Forms.Label();
             this.form2datebx = new System.Windows.Forms.TextBox();
             this.notedatelbl = new System.Windows.Forms.Label();
@@ -104,6 +96,10 @@ namespace Contact_Tracing
             this.qrlbl = new System.Windows.Forms.Label();
             this.infoqrlbl = new System.Windows.Forms.Label();
             this.databttn = new System.Windows.Forms.Button();
+            this.feverbx = new System.Windows.Forms.TextBox();
+            this.coughbx = new System.Windows.Forms.TextBox();
+            this.headbx = new System.Windows.Forms.TextBox();
+            this.sorebx = new System.Windows.Forms.TextBox();
             this.fevercr.ContentPanel.SuspendLayout();
             this.fevercr.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
@@ -195,14 +191,14 @@ namespace Contact_Tracing
             // 
             this.namebx.Location = new System.Drawing.Point(100, 164);
             this.namebx.Name = "namebx";
-            this.namebx.Size = new System.Drawing.Size(295, 20);
+            this.namebx.Size = new System.Drawing.Size(254, 20);
             this.namebx.TabIndex = 6;
             // 
             // addbx
             // 
             this.addbx.Location = new System.Drawing.Point(100, 210);
             this.addbx.Name = "addbx";
-            this.addbx.Size = new System.Drawing.Size(295, 20);
+            this.addbx.Size = new System.Drawing.Size(254, 20);
             this.addbx.TabIndex = 7;
             // 
             // noteaddresslbl
@@ -219,7 +215,7 @@ namespace Contact_Tracing
             // 
             this.numberbx.Location = new System.Drawing.Point(550, 169);
             this.numberbx.Name = "numberbx";
-            this.numberbx.Size = new System.Drawing.Size(254, 20);
+            this.numberbx.Size = new System.Drawing.Size(226, 20);
             this.numberbx.TabIndex = 9;
             this.numberbx.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
@@ -237,7 +233,7 @@ namespace Contact_Tracing
             // 
             this.emailbx.Location = new System.Drawing.Point(550, 207);
             this.emailbx.Name = "emailbx";
-            this.emailbx.Size = new System.Drawing.Size(254, 20);
+            this.emailbx.Size = new System.Drawing.Size(226, 20);
             this.emailbx.TabIndex = 11;
             // 
             // answerslbl
@@ -267,9 +263,8 @@ namespace Contact_Tracing
             // fevercr.ContentPanel
             // 
             this.fevercr.ContentPanel.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.fevercr.ContentPanel.Controls.Add(this.feverbx);
             this.fevercr.ContentPanel.Controls.Add(this.feverlbl);
-            this.fevercr.ContentPanel.Controls.Add(this.fevernorb);
-            this.fevercr.ContentPanel.Controls.Add(this.feveryesrb);
             this.fevercr.ContentPanel.Size = new System.Drawing.Size(347, 64);
             this.fevercr.LeftToolStripPanelVisible = false;
             this.fevercr.Location = new System.Drawing.Point(48, 308);
@@ -290,32 +285,10 @@ namespace Contact_Tracing
             this.feverlbl.TabIndex = 16;
             this.feverlbl.Text = "Do you have a fever?";
             // 
-            // fevernorb
-            // 
-            this.fevernorb.AutoSize = true;
-            this.fevernorb.Location = new System.Drawing.Point(134, 35);
-            this.fevernorb.Name = "fevernorb";
-            this.fevernorb.Size = new System.Drawing.Size(39, 17);
-            this.fevernorb.TabIndex = 15;
-            this.fevernorb.TabStop = true;
-            this.fevernorb.Text = "No";
-            this.fevernorb.UseVisualStyleBackColor = true;
-            // 
-            // feveryesrb
-            // 
-            this.feveryesrb.AutoSize = true;
-            this.feveryesrb.Location = new System.Drawing.Point(28, 35);
-            this.feveryesrb.Name = "feveryesrb";
-            this.feveryesrb.Size = new System.Drawing.Size(43, 17);
-            this.feveryesrb.TabIndex = 16;
-            this.feveryesrb.TabStop = true;
-            this.feveryesrb.Text = "Yes";
-            this.feveryesrb.UseVisualStyleBackColor = true;
-            // 
             // storebttn
             // 
             this.storebttn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.storebttn.Location = new System.Drawing.Point(626, 745);
+            this.storebttn.Location = new System.Drawing.Point(626, 704);
             this.storebttn.Name = "storebttn";
             this.storebttn.Size = new System.Drawing.Size(150, 36);
             this.storebttn.TabIndex = 15;
@@ -330,9 +303,8 @@ namespace Contact_Tracing
             // toolStripContainer1.ContentPanel
             // 
             this.toolStripContainer1.ContentPanel.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.toolStripContainer1.ContentPanel.Controls.Add(this.coughbx);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.coughlbl);
-            this.toolStripContainer1.ContentPanel.Controls.Add(this.coughnorb);
-            this.toolStripContainer1.ContentPanel.Controls.Add(this.coughyesrb);
             this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(347, 64);
             this.toolStripContainer1.LeftToolStripPanelVisible = false;
             this.toolStripContainer1.Location = new System.Drawing.Point(48, 373);
@@ -353,28 +325,6 @@ namespace Contact_Tracing
             this.coughlbl.TabIndex = 16;
             this.coughlbl.Text = "Do you have a dry cough?";
             // 
-            // coughnorb
-            // 
-            this.coughnorb.AutoSize = true;
-            this.coughnorb.Location = new System.Drawing.Point(134, 35);
-            this.coughnorb.Name = "coughnorb";
-            this.coughnorb.Size = new System.Drawing.Size(39, 17);
-            this.coughnorb.TabIndex = 15;
-            this.coughnorb.TabStop = true;
-            this.coughnorb.Text = "No";
-            this.coughnorb.UseVisualStyleBackColor = true;
-            // 
-            // coughyesrb
-            // 
-            this.coughyesrb.AutoSize = true;
-            this.coughyesrb.Location = new System.Drawing.Point(28, 35);
-            this.coughyesrb.Name = "coughyesrb";
-            this.coughyesrb.Size = new System.Drawing.Size(43, 17);
-            this.coughyesrb.TabIndex = 16;
-            this.coughyesrb.TabStop = true;
-            this.coughyesrb.Text = "Yes";
-            this.coughyesrb.UseVisualStyleBackColor = true;
-            // 
             // toolStripContainer2
             // 
             this.toolStripContainer2.BottomToolStripPanelVisible = false;
@@ -382,9 +332,8 @@ namespace Contact_Tracing
             // toolStripContainer2.ContentPanel
             // 
             this.toolStripContainer2.ContentPanel.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.toolStripContainer2.ContentPanel.Controls.Add(this.headbx);
             this.toolStripContainer2.ContentPanel.Controls.Add(this.label1);
-            this.toolStripContainer2.ContentPanel.Controls.Add(this.headachenorb);
-            this.toolStripContainer2.ContentPanel.Controls.Add(this.headacheyesrb);
             this.toolStripContainer2.ContentPanel.Size = new System.Drawing.Size(347, 64);
             this.toolStripContainer2.LeftToolStripPanelVisible = false;
             this.toolStripContainer2.Location = new System.Drawing.Point(48, 438);
@@ -405,28 +354,6 @@ namespace Contact_Tracing
             this.label1.TabIndex = 16;
             this.label1.Text = "Do you experience headache?";
             // 
-            // headachenorb
-            // 
-            this.headachenorb.AutoSize = true;
-            this.headachenorb.Location = new System.Drawing.Point(134, 35);
-            this.headachenorb.Name = "headachenorb";
-            this.headachenorb.Size = new System.Drawing.Size(39, 17);
-            this.headachenorb.TabIndex = 15;
-            this.headachenorb.TabStop = true;
-            this.headachenorb.Text = "No";
-            this.headachenorb.UseVisualStyleBackColor = true;
-            // 
-            // headacheyesrb
-            // 
-            this.headacheyesrb.AutoSize = true;
-            this.headacheyesrb.Location = new System.Drawing.Point(28, 35);
-            this.headacheyesrb.Name = "headacheyesrb";
-            this.headacheyesrb.Size = new System.Drawing.Size(43, 17);
-            this.headacheyesrb.TabIndex = 16;
-            this.headacheyesrb.TabStop = true;
-            this.headacheyesrb.Text = "Yes";
-            this.headacheyesrb.UseVisualStyleBackColor = true;
-            // 
             // toolStripContainer3
             // 
             this.toolStripContainer3.BottomToolStripPanelVisible = false;
@@ -434,9 +361,8 @@ namespace Contact_Tracing
             // toolStripContainer3.ContentPanel
             // 
             this.toolStripContainer3.ContentPanel.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.toolStripContainer3.ContentPanel.Controls.Add(this.sorebx);
             this.toolStripContainer3.ContentPanel.Controls.Add(this.label2);
-            this.toolStripContainer3.ContentPanel.Controls.Add(this.sorenorb);
-            this.toolStripContainer3.ContentPanel.Controls.Add(this.soreyesrb);
             this.toolStripContainer3.ContentPanel.Size = new System.Drawing.Size(347, 64);
             this.toolStripContainer3.LeftToolStripPanelVisible = false;
             this.toolStripContainer3.Location = new System.Drawing.Point(48, 503);
@@ -457,28 +383,6 @@ namespace Contact_Tracing
             this.label2.TabIndex = 16;
             this.label2.Text = "Do you have sore throat?";
             // 
-            // sorenorb
-            // 
-            this.sorenorb.AutoSize = true;
-            this.sorenorb.Location = new System.Drawing.Point(134, 35);
-            this.sorenorb.Name = "sorenorb";
-            this.sorenorb.Size = new System.Drawing.Size(39, 17);
-            this.sorenorb.TabIndex = 15;
-            this.sorenorb.TabStop = true;
-            this.sorenorb.Text = "No";
-            this.sorenorb.UseVisualStyleBackColor = true;
-            // 
-            // soreyesrb
-            // 
-            this.soreyesrb.AutoSize = true;
-            this.soreyesrb.Location = new System.Drawing.Point(28, 35);
-            this.soreyesrb.Name = "soreyesrb";
-            this.soreyesrb.Size = new System.Drawing.Size(43, 17);
-            this.soreyesrb.TabIndex = 16;
-            this.soreyesrb.TabStop = true;
-            this.soreyesrb.Text = "Yes";
-            this.soreyesrb.UseVisualStyleBackColor = true;
-            // 
             // secondformdatelbl
             // 
             this.secondformdatelbl.AutoSize = true;
@@ -493,7 +397,7 @@ namespace Contact_Tracing
             // 
             this.form2datebx.Location = new System.Drawing.Point(100, 88);
             this.form2datebx.Name = "form2datebx";
-            this.form2datebx.Size = new System.Drawing.Size(295, 20);
+            this.form2datebx.Size = new System.Drawing.Size(254, 20);
             this.form2datebx.TabIndex = 19;
             // 
             // notedatelbl
@@ -953,7 +857,7 @@ namespace Contact_Tracing
             // pictureboxqr
             // 
             this.pictureboxqr.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureboxqr.Location = new System.Drawing.Point(685, 29);
+            this.pictureboxqr.Location = new System.Drawing.Point(657, 29);
             this.pictureboxqr.Name = "pictureboxqr";
             this.pictureboxqr.Size = new System.Drawing.Size(119, 101);
             this.pictureboxqr.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -963,7 +867,7 @@ namespace Contact_Tracing
             // generatebttn
             // 
             this.generatebttn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.generatebttn.Location = new System.Drawing.Point(591, 94);
+            this.generatebttn.Location = new System.Drawing.Point(563, 94);
             this.generatebttn.Name = "generatebttn";
             this.generatebttn.Size = new System.Drawing.Size(88, 36);
             this.generatebttn.TabIndex = 36;
@@ -975,7 +879,7 @@ namespace Contact_Tracing
             // 
             this.qrlbl.AutoSize = true;
             this.qrlbl.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.qrlbl.Location = new System.Drawing.Point(538, 34);
+            this.qrlbl.Location = new System.Drawing.Point(510, 34);
             this.qrlbl.Name = "qrlbl";
             this.qrlbl.Size = new System.Drawing.Size(141, 14);
             this.qrlbl.TabIndex = 37;
@@ -985,7 +889,7 @@ namespace Contact_Tracing
             // 
             this.infoqrlbl.AutoSize = true;
             this.infoqrlbl.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.infoqrlbl.Location = new System.Drawing.Point(538, 51);
+            this.infoqrlbl.Location = new System.Drawing.Point(510, 51);
             this.infoqrlbl.Name = "infoqrlbl";
             this.infoqrlbl.Size = new System.Drawing.Size(145, 14);
             this.infoqrlbl.TabIndex = 38;
@@ -994,7 +898,7 @@ namespace Contact_Tracing
             // databttn
             // 
             this.databttn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.databttn.Location = new System.Drawing.Point(626, 704);
+            this.databttn.Location = new System.Drawing.Point(626, 746);
             this.databttn.Name = "databttn";
             this.databttn.Size = new System.Drawing.Size(150, 36);
             this.databttn.TabIndex = 39;
@@ -1002,11 +906,39 @@ namespace Contact_Tracing
             this.databttn.UseVisualStyleBackColor = false;
             this.databttn.Click += new System.EventHandler(this.button1_Click);
             // 
+            // feverbx
+            // 
+            this.feverbx.Location = new System.Drawing.Point(14, 32);
+            this.feverbx.Name = "feverbx";
+            this.feverbx.Size = new System.Drawing.Size(254, 20);
+            this.feverbx.TabIndex = 30;
+            // 
+            // coughbx
+            // 
+            this.coughbx.Location = new System.Drawing.Point(14, 34);
+            this.coughbx.Name = "coughbx";
+            this.coughbx.Size = new System.Drawing.Size(254, 20);
+            this.coughbx.TabIndex = 31;
+            // 
+            // headbx
+            // 
+            this.headbx.Location = new System.Drawing.Point(14, 34);
+            this.headbx.Name = "headbx";
+            this.headbx.Size = new System.Drawing.Size(254, 20);
+            this.headbx.TabIndex = 31;
+            // 
+            // sorebx
+            // 
+            this.sorebx.Location = new System.Drawing.Point(14, 33);
+            this.sorebx.Name = "sorebx";
+            this.sorebx.Size = new System.Drawing.Size(254, 20);
+            this.sorebx.TabIndex = 31;
+            // 
             // Contact_Tracing_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(798, 825);
+            this.ClientSize = new System.Drawing.Size(803, 825);
             this.Controls.Add(this.databttn);
             this.Controls.Add(this.infoqrlbl);
             this.Controls.Add(this.generatebttn);
@@ -1121,22 +1053,14 @@ namespace Contact_Tracing
         private System.Windows.Forms.Label answerslbl;
         private System.Windows.Forms.Label experiencelbl;
         private System.Windows.Forms.ToolStripContainer fevercr;
-        private System.Windows.Forms.RadioButton feveryesrb;
-        private System.Windows.Forms.RadioButton fevernorb;
         private System.Windows.Forms.Button storebttn;
         private System.Windows.Forms.Label feverlbl;
         private System.Windows.Forms.ToolStripContainer toolStripContainer1;
         private System.Windows.Forms.Label coughlbl;
-        private System.Windows.Forms.RadioButton coughnorb;
-        private System.Windows.Forms.RadioButton coughyesrb;
         private System.Windows.Forms.ToolStripContainer toolStripContainer2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RadioButton headachenorb;
-        private System.Windows.Forms.RadioButton headacheyesrb;
         private System.Windows.Forms.ToolStripContainer toolStripContainer3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RadioButton sorenorb;
-        private System.Windows.Forms.RadioButton soreyesrb;
         private System.Windows.Forms.Label secondformdatelbl;
         private System.Windows.Forms.TextBox form2datebx;
         private System.Windows.Forms.Label notedatelbl;
@@ -1181,5 +1105,9 @@ namespace Contact_Tracing
         private System.Windows.Forms.Label qrlbl;
         private System.Windows.Forms.Label infoqrlbl;
         private System.Windows.Forms.Button databttn;
+        private System.Windows.Forms.TextBox feverbx;
+        private System.Windows.Forms.TextBox coughbx;
+        private System.Windows.Forms.TextBox headbx;
+        private System.Windows.Forms.TextBox sorebx;
     }
 }

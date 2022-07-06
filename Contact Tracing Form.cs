@@ -31,7 +31,26 @@ namespace Contact_Tracing
         private void generatebttn_Click(object sender, EventArgs e)
         {
             string qrData = form2datebx.Text + "," + namebx.Text + "," + numberbx.Text + "," + addbx.Text + "," + emailbx.Text + "," + exposurebx.Text;
+                ;
+            string value = "";
+            bool nowchecked = feveryesrb.Checked;
+            if (nowchecked)
+                value = feveryesrb.Text;
+            else
+                value = fevernorb.Text;
             string qrImageFileName = namebx.Text;
+
+            if(string.IsNullOrEmpty(qrData) || string.IsNullOrEmpty(qrImageFileName))
+            {
+                MessageBox.Show("Textboxes are empty! Please input data.", "Error");
+                return;
+            }
+
+            if (File.Exists(@"C:\Users\Phenyang\source\repos\Contact_Tracing\qr info\"+ qrImageFileName + ".png"))
+            {
+                MessageBox.Show("File already exists!Choose another name!", "Error");
+                return;
+            }
 
             BarcodeWriter barcode = new BarcodeWriter();
             barcode.Format = BarcodeFormat.QR_CODE;
@@ -165,63 +184,11 @@ namespace Contact_Tracing
             file.WriteLine("Contact no.: " + numberbx.Text);
             file.WriteLine("Address: " + addbx.Text);
             file.WriteLine("Email Address: " + emailbx.Text);
+            file.WriteLine("Do you have a fever? " + feverbx.Text);
+            file.WriteLine("Do you have a fever? " + feverbx.Text);
 
-            //radio button select yes or no
-            //do you have a fever
-            String feverAnswer = "";
-            if (feveryesrb.Checked)
-            {
-                feverAnswer = feveryesrb.Text;
-                file.WriteLine("Do you have a fever? " + "Yes");
-            }
 
-            if (fevernorb.Checked)
-            {
-                feverAnswer = fevernorb.Text;
-                file.WriteLine("Do you have a fever? " + "No");
-            }
 
-            //Do you have a dry cough?
-            String drycoughAnswer = "";
-            if (coughyesrb.Checked)
-            {
-                drycoughAnswer = coughyesrb.Text;
-                file.WriteLine("Do you have a dry cough? " + "Yes");
-            }
-
-            if (coughnorb.Checked)
-            {
-                drycoughAnswer = coughnorb.Text;
-                file.WriteLine("Do you have a dry cough? " + "No");
-            }
-
-            //Do you experience headache?
-            String headacheAnswer = "";
-            if (headacheyesrb.Checked)
-            {
-                headacheAnswer = headacheyesrb.Text;
-                file.WriteLine("Do you experience headache? " + "Yes");
-            }
-
-            if (headachenorb.Checked)
-            {
-                headacheAnswer = headachenorb.Text;
-                file.WriteLine("Do you experience headache? " + "No");
-            }
-
-            //Do you have sore throat?
-            String soreAnswer = "";
-            if (headacheyesrb.Checked)
-            {
-                soreAnswer = soreyesrb.Text;
-                file.WriteLine("Do you have sore throat? " + "Yes");
-            }
-
-            if (sorenorb.Checked)
-            {
-                soreAnswer = sorenorb.Text;
-                file.WriteLine("Do you have sore throat? " + "No");
-            }
 
             //Do you experience fatigue?
             String fatigueAnswer = "";
