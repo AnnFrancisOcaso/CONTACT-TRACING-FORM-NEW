@@ -30,14 +30,8 @@ namespace Contact_Tracing
 
         private void generatebttn_Click(object sender, EventArgs e)
         {
-            string qrData = form2datebx.Text + "," + namebx.Text + "," + numberbx.Text + "," + addbx.Text + "," + emailbx.Text + "," + exposurebx.Text;
-                ;
-            string value = "";
-            bool nowchecked = feveryesrb.Checked;
-            if (nowchecked)
-                value = feveryesrb.Text;
-            else
-                value = fevernorb.Text;
+            string qrData = form2datebx.Text + "," + namebx.Text + "," + numberbx.Text + "," + addbx.Text + "," + emailbx.Text + "," + feverbx.Text + "," + coughbx.Text + "," + headbx.Text + "," + sorebx.Text + "," + fatiguebx.Text + "," + breathbx.Text + "," + bodybx.Text + "," + diabx.Text + "," + smellbx.Text + "," + citybx.Text + "," + exposurebx.Text;
+         
             string qrImageFileName = namebx.Text;
 
             if(string.IsNullOrEmpty(qrData) || string.IsNullOrEmpty(qrImageFileName))
@@ -87,62 +81,17 @@ namespace Contact_Tracing
             cn = numberbx.Text;
             add = addbx.Text;
             ea = emailbx.Text;
-            //
-            if (feveryesrb.Checked)
-                dfever = feveryesrb.Text;
-            if (fevernorb.Checked)
-                dfever = fevernorb.Text;
-            //
-            if (coughyesrb.Checked)
-                ddryc = coughyesrb.Text;
-            if (coughnorb.Checked)
-                ddryc = coughnorb.Text;
-            //
-            if (headacheyesrb.Checked)
-                dheadache = headacheyesrb.Text;
-            if (headachenorb.Checked)
-                dheadache = headachenorb.Text;
-            //
-            if (soreyesrb.Checked)
-                dsoret = soreyesrb.Text;
-            if (sorenorb.Checked)
-                dsoret = sorenorb.Text;
-            //
-            if (fatigueyesrb.Checked)
-                dfatigue = fatigueyesrb.Text;
-            if (fatiguenorb.Checked)
-                dfatigue = fatiguenorb.Text;
-            //
-            if (breathyesrb.Checked)
-                dshortb = breathyesrb.Text;
-            if (breathnorb.Checked)
-                dshortb = breathnorb.Text;
-            //
-            if (bodyyesrb.Checked)
-                dbodya = bodyyesrb.Text;
-            if (bodynorb.Checked)
-                dbodya = bodynorb.Text;
-            //
-            if (diarrheayesrb.Checked)
-                ddia = diarrheayesrb.Text;
-            if (diarrheanorb.Checked)
-                ddia = diarrheanorb.Text;
-            //
-            if (smellyesrb.Checked)
-                dsmell = smellyesrb.Text;
-            if (smellnorb.Checked)
-                dsmell = smellnorb.Text;
-            //
-            if (goneyesrb.Checked)
-                dcity = goneyesrb.Text;
-            if (gonenorb.Checked)
-                dcity = gonenorb.Text;
-            //
-            if (patientyesrb.Checked)
-                dpatient = patientyesrb.Text;
-            if (patientnorb.Checked)
-                dpatient = patientnorb.Text;
-            //
+            dfever = feverbx.Text;
+            ddryc = coughbx.Text;
+            dheadache = headbx.Text;
+            dsoret = sorebx.Text;
+            dfatigue = fatiguebx.Text;
+            dshortb = breathbx.Text;
+            dbodya = bodybx.Text;
+            ddia = diabx.Text;
+            dsmell = smellbx.Text;
+            dcity = citybx.Text;
+            dpatient = patientbx.Text;
             dexposure = exposurebx.Text;
 
 
@@ -185,126 +134,21 @@ namespace Contact_Tracing
             file.WriteLine("Address: " + addbx.Text);
             file.WriteLine("Email Address: " + emailbx.Text);
             file.WriteLine("Do you have a fever? " + feverbx.Text);
-            file.WriteLine("Do you have a fever? " + feverbx.Text);
-
-
-
-
-            //Do you experience fatigue?
-            String fatigueAnswer = "";
-            if (fatigueyesrb.Checked)
-            {
-                fatigueAnswer = fatigueyesrb.Text;
-                file.WriteLine("Do you experience fatigue? " + "Yes");
-            }
-
-            if (fatiguenorb.Checked)
-            {
-                fatigueAnswer = fatiguenorb.Text;
-                file.WriteLine("Do you experience fatigue? " + "No");
-            }
-
-            //Do you experience shortness of breath?
-            String breathAnswer = "";
-            if (breathyesrb.Checked)
-            {
-                breathAnswer = breathyesrb.Text;
-                file.WriteLine("Do you experience shortness of breath? " + "Yes");
-            }
-
-            if (breathnorb.Checked)
-            {
-                breathAnswer = breathnorb.Text;
-                file.WriteLine("Do you experience shortness of breath? " + "No");
-            }
-
-            //Do you experience body ache?
-            String bodyAnswer = "";
-            if (bodyyesrb.Checked)
-            {
-                bodyAnswer = bodyyesrb.Text;
-                file.WriteLine("Do you experience body ache? " + "Yes");
-            }
-
-            if (bodynorb.Checked)
-            {
-                bodyAnswer = bodynorb.Text;
-                file.WriteLine("Do you experience body ache? " + "No");
-            }
-
-            //Do you experience diarrhea?
-            String diarrheaAnswer = "";
-            if (diarrheayesrb.Checked)
-            {
-                diarrheaAnswer = diarrheayesrb.Text;
-                file.WriteLine("Do you experience diarrhea? " + "Yes");
-            }
-
-            if (diarrheanorb.Checked)
-            {
-                diarrheaAnswer = diarrheanorb.Text;
-                file.WriteLine("Do you experience diarrhea? " + "No");
-            }
-
-            //Do you experience loss of smell?
-            String smellAnswer = "";
-            if (smellyesrb.Checked)
-            {
-                smellAnswer = smellyesrb.Text;
-                file.WriteLine("Do you experience loss of smell? " + "Yes");
-            }
-
-            if (smellnorb.Checked)
-            {
-                smellAnswer = smellnorb.Text;
-                file.WriteLine("Do you experience loss of smell? " + "No");
-            }
-
-            //Have you gone somewhere outside your residence city?
-            String goneAnswer = "";
-            if (goneyesrb.Checked)
-            {
-                goneAnswer = goneyesrb.Text;
-                file.WriteLine("Have you gone somewhere outside your residence city? " + "Yes");
-            }
-
-            if (gonenorb.Checked)
-            {
-                goneAnswer = gonenorb.Text;
-                file.WriteLine("Have you gone somewhere outside your residence city? " + "No");
-            }
-
-            //Have you had close contact with a Covid 19 patient?
-            String patientAnswer = "";
-            if (patientyesrb.Checked)
-            {
-                patientAnswer = patientyesrb.Text;
-                file.WriteLine("Have you had close contact with a Covid 19 patient? " + "Yes");
-            }
-
-            if (patientnorb.Checked)
-            {
-                patientAnswer = patientnorb.Text;
-                file.WriteLine("Have you had close contact with a Covid 19 patient? " + "No");
-            }
-
-            //If yes, state the date of the exposure. If no, type NA.
-
+            file.WriteLine("Do you have a dry cough? " + coughbx.Text);
+            file.WriteLine("Do you experience headache? " + headbx.Text);
+            file.WriteLine("Do you have sore throat? " + sorebx.Text);
+            file.WriteLine("Do you experience fatigue? " + fatiguebx.Text);
+            file.WriteLine("Do you experience shortness of breath? " + breathbx.Text);
+            file.WriteLine("Do you experience body ache? " + bodybx.Text);
+            file.WriteLine("Do you experience diarrhea? " + diabx.Text);
+            file.WriteLine("Do you experience loss of smell? " + smellbx.Text);
+            file.WriteLine("Have you gone somewhere outside your residence city? " + citybx.Text);
+            file.WriteLine("Have you had close contact with a Covid 19 patient? " + patientbx.Text);
             file.WriteLine("If yes, state the date of the exposure. If no, type NA. " + exposurebx.Text);
 
             file.Close();
         }
 
-        //private void checkbttn_Click(object sender, EventArgs e)
-        //{
-        //    StreamReader reader = new StreamReader(@"C:\Users\Phenyang\source\repos\Contact_Tracing\Contact Tracing Form Information.txt");
-
-        //    while (!reader.EndOfStream)
-        //    {
-        //        String line = reader.ReadLine();
-        //        MessageBox.Show(line);
-        //    }
-
-        //}
+        
     }
 }

@@ -32,6 +32,7 @@ namespace Contact_Tracing
             this.dataGridViewctf = new System.Windows.Forms.DataGridView();
             this.CTFlbl = new System.Windows.Forms.Label();
             this.savebttn = new System.Windows.Forms.Button();
+            this.Homebttn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewctf)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,7 +57,7 @@ namespace Contact_Tracing
             // savebttn
             // 
             this.savebttn.Font = new System.Drawing.Font("Mongolian Baiti", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.savebttn.Location = new System.Drawing.Point(216, 389);
+            this.savebttn.Location = new System.Drawing.Point(230, 390);
             this.savebttn.Name = "savebttn";
             this.savebttn.Size = new System.Drawing.Size(148, 31);
             this.savebttn.TabIndex = 2;
@@ -64,11 +65,23 @@ namespace Contact_Tracing
             this.savebttn.UseVisualStyleBackColor = true;
             this.savebttn.Click += new System.EventHandler(this.savebttn_Click);
             // 
+            // Homebttn
+            // 
+            this.Homebttn.Font = new System.Drawing.Font("Mongolian Baiti", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Homebttn.Location = new System.Drawing.Point(506, 22);
+            this.Homebttn.Name = "Homebttn";
+            this.Homebttn.Size = new System.Drawing.Size(98, 31);
+            this.Homebttn.TabIndex = 3;
+            this.Homebttn.Text = "Home";
+            this.Homebttn.UseVisualStyleBackColor = true;
+            this.Homebttn.Click += new System.EventHandler(this.Homebttn_Click);
+            // 
             // Contact_Tracing_Information
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(616, 450);
+            this.Controls.Add(this.Homebttn);
             this.Controls.Add(this.savebttn);
             this.Controls.Add(this.CTFlbl);
             this.Controls.Add(this.dataGridViewctf);
@@ -86,5 +99,6 @@ namespace Contact_Tracing
         private System.Windows.Forms.DataGridView dataGridViewctf;
         private System.Windows.Forms.Label CTFlbl;
         private System.Windows.Forms.Button savebttn;
+        private System.Windows.Forms.Button Homebttn;
     }
 }

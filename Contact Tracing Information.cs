@@ -75,5 +75,12 @@ namespace Contact_Tracing
             dt.Rows.Add(usIn);
             dataGridViewctf.DataSource = dt;
         }
+
+        private void Homebttn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login f1 = new Login();
+            f1.Show();
+        }
     }
 }

@@ -67,5 +67,12 @@ namespace Contact_Tracing
 
             MessageBox.Show("Information saved!");
         }
+
+        private void Homebttn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login f1 = new Login();
+            f1.Show();
+        }
     }
 }
